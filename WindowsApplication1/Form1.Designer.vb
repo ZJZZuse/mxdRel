@@ -27,9 +27,6 @@ Partial Class Form1
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-
-       
-
         Me.components = New System.ComponentModel.Container()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
@@ -38,24 +35,23 @@ Partial Class Form1
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.AutoKeyPressCom1 = New WindowsApplication1.AutoKeyPressCom()
-        Me.AutoKeyPressCom2 = New WindowsApplication1.AutoKeyPressCom()
+        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.AutoKeyPressCom3 = New WindowsApplication1.AutoKeyPressCom()
+        Me.AutoKeyPressCom2 = New WindowsApplication1.AutoKeyPressCom()
+        Me.AutoKeyPressCom1 = New WindowsApplication1.AutoKeyPressCom()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-
         Me.SuspendLayout()
         '
         'CheckBox1
@@ -122,10 +118,26 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(624, 236)
+        Me.TabPage1.Size = New System.Drawing.Size(664, 236)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(170, 83)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(200, 100)
+        Me.Panel1.TabIndex = 5
+        '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Items.AddRange(New Object() {"左右移动"})
+        Me.CheckedListBox1.Location = New System.Drawing.Point(376, 6)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(240, 164)
+        Me.CheckedListBox1.TabIndex = 4
         '
         'TabPage2
         '
@@ -135,7 +147,7 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(624, 236)
+        Me.TabPage2.Size = New System.Drawing.Size(664, 236)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "血蓝"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -166,22 +178,6 @@ Partial Class Form1
         Me.TrackBar1.TabIndex = 0
         Me.TrackBar1.Value = 4
         '
-        'CheckedListBox1
-        '
-        Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Items.AddRange(New Object() {"左右移动"})
-        Me.CheckedListBox1.Location = New System.Drawing.Point(376, 6)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(240, 164)
-        Me.CheckedListBox1.TabIndex = 4
-        '
-        'Panel1
-        '
-        Me.Panel1.Location = New System.Drawing.Point(170, 83)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 100)
-        Me.Panel1.TabIndex = 5
-        '
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.AutoKeyPressCom3)
@@ -197,14 +193,6 @@ Partial Class Form1
         Me.TabPage3.Text = "cus btn cfg"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'ListView1
-        '
-        Me.ListView1.Location = New System.Drawing.Point(8, 6)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(650, 195)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(541, 207)
@@ -214,26 +202,40 @@ Partial Class Form1
         Me.Button1.Text = "add new"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'AutoKeyPressCom1
+        'ListView1
         '
-        Me.AutoKeyPressCom1.Location = New System.Drawing.Point(19, 20)
-        Me.AutoKeyPressCom1.Name = "AutoKeyPressCom1"
-        Me.AutoKeyPressCom1.Size = New System.Drawing.Size(597, 47)
-        Me.AutoKeyPressCom1.TabIndex = 2
+        Me.ListView1.Location = New System.Drawing.Point(8, 6)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(650, 195)
+        Me.ListView1.TabIndex = 0
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'AutoKeyPressCom3
+        '
+        Me.AutoKeyPressCom3.dm = Nothing
+        Me.AutoKeyPressCom3.enable = True
+        Me.AutoKeyPressCom3.Location = New System.Drawing.Point(19, 126)
+        Me.AutoKeyPressCom3.Name = "AutoKeyPressCom3"
+        Me.AutoKeyPressCom3.Size = New System.Drawing.Size(597, 47)
+        Me.AutoKeyPressCom3.TabIndex = 4
         '
         'AutoKeyPressCom2
         '
+        Me.AutoKeyPressCom2.dm = Nothing
+        Me.AutoKeyPressCom2.enable = True
         Me.AutoKeyPressCom2.Location = New System.Drawing.Point(19, 73)
         Me.AutoKeyPressCom2.Name = "AutoKeyPressCom2"
         Me.AutoKeyPressCom2.Size = New System.Drawing.Size(597, 47)
         Me.AutoKeyPressCom2.TabIndex = 3
         '
-        'AutoKeyPressCom3
+        'AutoKeyPressCom1
         '
-        Me.AutoKeyPressCom3.Location = New System.Drawing.Point(19, 126)
-        Me.AutoKeyPressCom3.Name = "AutoKeyPressCom3"
-        Me.AutoKeyPressCom3.Size = New System.Drawing.Size(597, 47)
-        Me.AutoKeyPressCom3.TabIndex = 4
+        Me.AutoKeyPressCom1.dm = Nothing
+        Me.AutoKeyPressCom1.enable = True
+        Me.AutoKeyPressCom1.Location = New System.Drawing.Point(19, 20)
+        Me.AutoKeyPressCom1.Name = "AutoKeyPressCom1"
+        Me.AutoKeyPressCom1.Size = New System.Drawing.Size(597, 47)
+        Me.AutoKeyPressCom1.TabIndex = 2
         '
         'Form1
         '

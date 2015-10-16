@@ -10,3 +10,15 @@ D:\vsworkplace\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsAppl
 D:\vsworkplace\WindowsApplication1\WindowsApplication1\obj\x86\Debug\Interop.Dm.dll
 D:\vsworkplace\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.ResolveComReference.cache
 D:\vsworkplace\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.AutoKeyPressCom.resources
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\Interop.Dm.dll
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.ResolveComReference.cache
+D:\data\githubData\mxdRel\WindowsApplication1\bin\Debug\simple mxd.exe
+D:\data\githubData\mxdRel\WindowsApplication1\bin\Debug\simple mxd.pdb
+D:\data\githubData\mxdRel\WindowsApplication1\bin\Debug\simple mxd.xml
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Form1.resources
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\WindowsApplication1.AutoKeyPressCom.resources
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.exe
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.xml
+D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.pdb

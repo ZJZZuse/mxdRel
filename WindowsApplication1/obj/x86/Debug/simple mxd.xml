@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+simplemxd
+</name>
+</assembly>
+<members>
+<member name="M:WindowsApplication1.MyDm.#ctor(Dm.dmsoft,System.Int32,WindowsApplication1.MyDm.bindAction)">
+	<summary>
+ common one time builder
+ </summary>
+	<param name="dm"></param>
+	<param name="hwnd"></param>
+	<param name="bindAction"></param>
+	<remarks></remarks>
+</member><member name="T:WindowsApplication1.MyDmSubBaseFormat">
+	<summary>
+ dm 便利抽象类，类是模版方法，so nice
+ </summary>
+	<remarks></remarks>
+</member><member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:WindowsApplication1.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:WindowsApplication1.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

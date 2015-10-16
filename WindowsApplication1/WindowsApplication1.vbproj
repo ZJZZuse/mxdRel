@@ -10,7 +10,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
     <RootNamespace>WindowsApplication1</RootNamespace>
-    <AssemblyName>WindowsApplication1</AssemblyName>
+    <AssemblyName>simple mxd</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -23,7 +23,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>WindowsApplication1.xml</DocumentationFile>
+    <DocumentationFile>simple mxd.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>WindowsApplication1.xml</DocumentationFile>
+    <DocumentationFile>simple mxd.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -49,6 +49,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="bssoftT">
+      <HintPath>Resources\bssoftT.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -73,6 +77,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BloodReplyRel.vb" />
+    <Compile Include="cusClass\bo\AutoPressTask.vb" />
+    <Compile Include="cusClass\bo\MxdFunctionObjectCollection.vb" />
+    <Compile Include="cusClass\certainClasses\MxdAutoPressHelper.vb" />
+    <Compile Include="cusClass\certainClasses\MxdBloodRecoverRelHelper.vb" />
+    <Compile Include="cusClass\MyMxdGameInitHelper.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +110,16 @@
     <Compile Include="AutoKeyPressCom.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="myCommonTools\abstractClass\MyDmAtionConvenience.vb" />
+    <Compile Include="myCommonTools\DmGuard.vb" />
+    <Compile Include="myCommonTools\interface\MyDmAtion.vb" />
+    <Compile Include="myCommonTools\MyCommonToolsZ.vb" />
+    <Compile Include="myCommonTools\MyDm.vb" />
+    <Compile Include="myCommonTools\MyDmSubBaseFormat.vb" />
+    <Compile Include="cusClass\certainClasses\MyMxdCommonHelper.vb" />
+    <Compile Include="myCommonTools\MySimpleLoger.vb" />
+    <Compile Include="myCommonTools\SysRleHelper.vb" />
+    <Compile Include="cusClass\MyMxdHelperBase.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -138,6 +157,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -2,11 +2,24 @@
 <doc>
 <assembly>
 <name>
-WindowsApplication1
+simplemxd
 </name>
 </assembly>
 <members>
-<member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
+<member name="M:WindowsApplication1.MyDm.#ctor(Dm.dmsoft,System.Int32,WindowsApplication1.MyDm.bindAction)">
+	<summary>
+ common one time builder
+ </summary>
+	<param name="dm"></param>
+	<param name="hwnd"></param>
+	<param name="bindAction"></param>
+	<remarks></remarks>
+</member><member name="T:WindowsApplication1.MyDmSubBaseFormat">
+	<summary>
+ dm 便利抽象类，类是模版方法，so nice
+ </summary>
+	<remarks></remarks>
+</member><member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
