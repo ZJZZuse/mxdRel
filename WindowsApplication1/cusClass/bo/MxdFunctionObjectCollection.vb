@@ -11,13 +11,32 @@ Public Class MxdFunctionObjectCollection
     Property autoPick As AutoPressTask
     Property autoAttack As AutoPressTask
 
-    Sub New(ByVal bloodR, ByVal mxd, ByVal autoPress)
+    Private myDm As MyDm
+
+    Property autoPickKey = "z"
+
+    Property autoAttackKey = "delete"
+
+    Sub New(ByVal myDm, ByVal bloodR, ByVal mxd, ByVal autoPress)
+
+        Me.myDm = myDm
 
         Me.bloodR = bloodR
         Me.mxd = mxd
         Me.autoPress = autoPress
 
+        myInit()
+
     End Sub
+
+    Private Sub myInit()
+
+        autoPick = New AutoPressTask(myDm, autoPickKey, 500)
+        autoAttack = New AutoPressTask(myDm, autoAttackKey, 500)
+
+    End Sub
+
+
 
 
 

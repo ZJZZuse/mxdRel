@@ -47,8 +47,8 @@ Public Class MyMxdGameInitHelper
     End Sub
 
     Protected Overrides Function findHwndToBeRealize(ByVal dm As Dm.Idmsoft) As Object
-        'todo
-        Dim hwnd = dm.FindWindow("", "记事本")
+
+        Dim hwnd = dm.FindWindow("MapleStoryClass", "MapleStory")
 
         Return hwnd
     End Function

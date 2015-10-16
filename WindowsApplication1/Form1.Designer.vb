@@ -41,17 +41,24 @@ Partial Class Form1
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
+        Me.common = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.AutoKeyPressCom3 = New WindowsApplication1.AutoKeyPressCom()
-        Me.AutoKeyPressCom2 = New WindowsApplication1.AutoKeyPressCom()
-        Me.AutoKeyPressCom1 = New WindowsApplication1.AutoKeyPressCom()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.AutoPressTaskBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AutoPressTaskBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MxdAutoPressHelperBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KeyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IntervalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EnableDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AutoPressTaskBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AutoPressTaskBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MxdAutoPressHelperBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CheckBox1
@@ -76,7 +83,6 @@ Partial Class Form1
         '
         'Timer1
         '
-        Me.Timer1.Enabled = True
         '
         'TextBox1
         '
@@ -99,12 +105,13 @@ Partial Class Form1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.common)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(672, 262)
+        Me.TabControl1.Size = New System.Drawing.Size(676, 354)
         Me.TabControl1.TabIndex = 5
         '
         'TabPage1
@@ -118,7 +125,7 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(664, 236)
+        Me.TabPage1.Size = New System.Drawing.Size(668, 328)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -147,7 +154,7 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(664, 236)
+        Me.TabPage2.Size = New System.Drawing.Size(668, 328)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "血蓝"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -178,70 +185,74 @@ Partial Class Form1
         Me.TrackBar1.TabIndex = 0
         Me.TrackBar1.Value = 4
         '
+        'common
+        '
+        Me.common.Location = New System.Drawing.Point(4, 22)
+        Me.common.Name = "common"
+        Me.common.Padding = New System.Windows.Forms.Padding(3)
+        Me.common.Size = New System.Drawing.Size(668, 328)
+        Me.common.TabIndex = 3
+        Me.common.Text = "TabPage4"
+        Me.common.UseVisualStyleBackColor = True
+        '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.AutoKeyPressCom3)
-        Me.TabPage3.Controls.Add(Me.AutoKeyPressCom2)
-        Me.TabPage3.Controls.Add(Me.AutoKeyPressCom1)
-        Me.TabPage3.Controls.Add(Me.Button1)
-        Me.TabPage3.Controls.Add(Me.ListView1)
+        Me.TabPage3.Controls.Add(Me.DataGridView1)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(664, 236)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "cus btn cfg"
+        Me.TabPage3.Size = New System.Drawing.Size(668, 328)
+        Me.TabPage3.TabIndex = 4
+        Me.TabPage3.Text = "auto press"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Button1
+        'DataGridView1
         '
-        Me.Button1.Location = New System.Drawing.Point(541, 207)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "add new"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.KeyDataGridViewTextBoxColumn, Me.IntervalDataGridViewTextBoxColumn, Me.EnableDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.AutoPressTaskBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(104, 35)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 23
+        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.TabIndex = 0
         '
-        'ListView1
+        'AutoPressTaskBindingSource
         '
-        Me.ListView1.Location = New System.Drawing.Point(8, 6)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(650, 195)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.AutoPressTaskBindingSource.DataSource = GetType(WindowsApplication1.AutoPressTask)
         '
-        'AutoKeyPressCom3
+        'AutoPressTaskBindingSource1
         '
-        Me.AutoKeyPressCom3.dm = Nothing
-        Me.AutoKeyPressCom3.enable = True
-        Me.AutoKeyPressCom3.Location = New System.Drawing.Point(19, 126)
-        Me.AutoKeyPressCom3.Name = "AutoKeyPressCom3"
-        Me.AutoKeyPressCom3.Size = New System.Drawing.Size(597, 47)
-        Me.AutoKeyPressCom3.TabIndex = 4
+        Me.AutoPressTaskBindingSource1.DataSource = GetType(WindowsApplication1.AutoPressTask)
         '
-        'AutoKeyPressCom2
+        'MxdAutoPressHelperBindingSource
         '
-        Me.AutoKeyPressCom2.dm = Nothing
-        Me.AutoKeyPressCom2.enable = True
-        Me.AutoKeyPressCom2.Location = New System.Drawing.Point(19, 73)
-        Me.AutoKeyPressCom2.Name = "AutoKeyPressCom2"
-        Me.AutoKeyPressCom2.Size = New System.Drawing.Size(597, 47)
-        Me.AutoKeyPressCom2.TabIndex = 3
+        Me.MxdAutoPressHelperBindingSource.DataSource = GetType(WindowsApplication1.MxdAutoPressHelper)
         '
-        'AutoKeyPressCom1
+        'KeyDataGridViewTextBoxColumn
         '
-        Me.AutoKeyPressCom1.dm = Nothing
-        Me.AutoKeyPressCom1.enable = True
-        Me.AutoKeyPressCom1.Location = New System.Drawing.Point(19, 20)
-        Me.AutoKeyPressCom1.Name = "AutoKeyPressCom1"
-        Me.AutoKeyPressCom1.Size = New System.Drawing.Size(597, 47)
-        Me.AutoKeyPressCom1.TabIndex = 2
+        Me.KeyDataGridViewTextBoxColumn.DataPropertyName = "key"
+        Me.KeyDataGridViewTextBoxColumn.HeaderText = "key"
+        Me.KeyDataGridViewTextBoxColumn.Name = "KeyDataGridViewTextBoxColumn"
+        '
+        'IntervalDataGridViewTextBoxColumn
+        '
+        Me.IntervalDataGridViewTextBoxColumn.DataPropertyName = "interval"
+        Me.IntervalDataGridViewTextBoxColumn.HeaderText = "interval"
+        Me.IntervalDataGridViewTextBoxColumn.Name = "IntervalDataGridViewTextBoxColumn"
+        '
+        'EnableDataGridViewTextBoxColumn
+        '
+        Me.EnableDataGridViewTextBoxColumn.DataPropertyName = "enable"
+        Me.EnableDataGridViewTextBoxColumn.HeaderText = "enable"
+        Me.EnableDataGridViewTextBoxColumn.Name = "EnableDataGridViewTextBoxColumn"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(672, 289)
+        Me.ClientSize = New System.Drawing.Size(676, 354)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Form1"
         Me.Text = "mxd"
@@ -252,6 +263,10 @@ Partial Class Form1
         Me.TabPage2.PerformLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AutoPressTaskBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AutoPressTaskBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MxdAutoPressHelperBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -268,11 +283,14 @@ Partial Class Form1
     Friend WithEvents TrackBar1 As System.Windows.Forms.TrackBar
     Friend WithEvents CheckedListBox1 As System.Windows.Forms.CheckedListBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents common As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents ListView1 As System.Windows.Forms.ListView
-    Friend WithEvents AutoKeyPressCom3 As WindowsApplication1.AutoKeyPressCom
-    Friend WithEvents AutoKeyPressCom2 As WindowsApplication1.AutoKeyPressCom
-    Friend WithEvents AutoKeyPressCom1 As WindowsApplication1.AutoKeyPressCom
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents AutoPressTaskBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents AutoPressTaskBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents KeyDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IntervalDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents EnableDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents MxdAutoPressHelperBindingSource As System.Windows.Forms.BindingSource
 
 End Class

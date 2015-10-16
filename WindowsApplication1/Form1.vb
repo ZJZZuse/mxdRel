@@ -17,31 +17,31 @@
         InitializeComponent()
 
         ' 在 InitializeComponent() 调用之后添加任何初始化。
-        AutoKeyPressCom1.dm = dm
-        AutoKeyPressCom2.dm = dm
-        AutoKeyPressCom3.dm = dm
+
+
+        initDate()
 
     End Sub
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Dim path
+        'Dim path
 
-        path = dm.GetDir(0)
+        'path = dm.GetDir(0)
 
-        MsgBox(path)
-
-
-        hwnd = dm.FindWindow("MapleStoryClass", "MapleStory")
+        'MsgBox(path)
 
 
-        ' display: 前台 鼠标:前台键盘:前台 模式0
-        'dm_ret = dm.BindWindow(hwnd, "normal", "normal", "normal", 0)
+        'hwnd = dm.FindWindow("MapleStoryClass", "MapleStory")
 
 
-        'dm_ret = dm.BindWindow(hwnd, "dx", "dx", "dx", 0)
+        '' display: 前台 鼠标:前台键盘:前台 模式0
+        ''dm_ret = dm.BindWindow(hwnd, "normal", "normal", "normal", 0)
 
-        dm_ret = dm.BindWindow(hwnd, "dx", "windows", "windows", 0)
+
+        ''dm_ret = dm.BindWindow(hwnd, "dx", "dx", "dx", 0)
+
+        'dm_ret = dm.BindWindow(hwnd, "dx", "windows", "windows", 0)
 
 
 
@@ -212,31 +212,30 @@
 
     End Sub
 
-    Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub enableOthenCom(ByVal turnOn)
-
-        If turnOn Then
-
-            AutoKeyPressCom1.enable = True
-            AutoKeyPressCom2.enable = True
-            AutoKeyPressCom3.enable = True
-
-        Else
-
-            AutoKeyPressCom1.enable = False
-            AutoKeyPressCom2.enable = False
-            AutoKeyPressCom3.enable = False
-
-        End If
-
-
+    Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
     Private Sub TabPage2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabPage2.Click
+
+    End Sub
+
+    Private Sub initDate()
+
+
+        'mydm
+        ' collection
+
+        Dim a = New AutoPressTask(New MyDm(dm), "z", 10)
+
+
+
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+
 
     End Sub
 End Class
