@@ -44,12 +44,12 @@ Partial Class Form1
         Me.common = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.AutoPressTaskBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AutoPressTaskBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MxdAutoPressHelperBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KeyDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IntervalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EnableDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AutoPressTaskBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AutoPressTaskBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MxdAutoPressHelperBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -215,20 +215,8 @@ Partial Class Form1
         Me.DataGridView1.Location = New System.Drawing.Point(104, 35)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 23
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(507, 218)
         Me.DataGridView1.TabIndex = 0
-        '
-        'AutoPressTaskBindingSource
-        '
-        Me.AutoPressTaskBindingSource.DataSource = GetType(WindowsApplication1.AutoPressTask)
-        '
-        'AutoPressTaskBindingSource1
-        '
-        Me.AutoPressTaskBindingSource1.DataSource = GetType(WindowsApplication1.AutoPressTask)
-        '
-        'MxdAutoPressHelperBindingSource
-        '
-        Me.MxdAutoPressHelperBindingSource.DataSource = GetType(WindowsApplication1.MxdAutoPressHelper)
         '
         'KeyDataGridViewTextBoxColumn
         '
@@ -247,6 +235,18 @@ Partial Class Form1
         Me.EnableDataGridViewTextBoxColumn.DataPropertyName = "enable"
         Me.EnableDataGridViewTextBoxColumn.HeaderText = "enable"
         Me.EnableDataGridViewTextBoxColumn.Name = "EnableDataGridViewTextBoxColumn"
+        '
+        'AutoPressTaskBindingSource
+        '
+        Me.AutoPressTaskBindingSource.DataSource = GetType(WindowsApplication1.AutoPressTask)
+        '
+        'AutoPressTaskBindingSource1
+        '
+        Me.AutoPressTaskBindingSource1.DataSource = GetType(WindowsApplication1.AutoPressTask)
+        '
+        'MxdAutoPressHelperBindingSource
+        '
+        Me.MxdAutoPressHelperBindingSource.DataSource = GetType(WindowsApplication1.MxdAutoPressHelper)
         '
         'Form1
         '

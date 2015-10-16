@@ -6,7 +6,7 @@ Public Class MxdAutoPressHelper
 
     Inherits MyMxdHelperBase
 
-    Private autpPressTasks As New Collection
+    Property autpPressTasks As New Collection
 
     WriteOnly Property enable()
 

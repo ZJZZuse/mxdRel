@@ -226,9 +226,15 @@
         'mydm
         ' collection
 
-        Dim a = New AutoPressTask(New MyDm(dm), "z", 10)
+        Dim myDm = New MyDm(dm)
 
+        Dim a = New AutoPressTask(myDm, "z", 10)
 
+        Dim t = New MxdAutoPressHelper(myDm)
+
+        t.add(a)
+
+        DataGridView1.DataSource = t.autpPressTasks
 
 
     End Sub
