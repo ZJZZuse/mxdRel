@@ -22,3 +22,8 @@ D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\WindowsApplication1.
 D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.exe
 D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.xml
 D:\data\githubData\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.pdb
+D:\vsworkplace\mxdRel\WindowsApplication1\obj\x86\Debug\Interop.Dm.dll
+D:\vsworkplace\mxdRel\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.ResolveComReference.cache
+D:\vsworkplace\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.exe
+D:\vsworkplace\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.xml
+D:\vsworkplace\mxdRel\WindowsApplication1\obj\x86\Debug\simple mxd.pdb
